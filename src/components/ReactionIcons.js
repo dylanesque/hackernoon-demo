@@ -1,5 +1,3 @@
-const ReactionIcons = () => {
-    return ( <div>Reaction Icons Go Here</div> );
+export const ReactionIcons = () => {
+    return ( <span>Reaction Icons Go Here</span> );
 }
- 
-export default ReactionIcons;

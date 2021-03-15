@@ -1,6 +1,6 @@
 const SocialShareIcons = () => {
     return (
-        <div>Social Sharing Icons Placeholder</div>
+        <div style={{ margin: '32px auto', width: 'fit-content'}}>Social Sharing Icons Placeholder</div>
      );
 }
  

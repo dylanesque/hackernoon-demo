@@ -10,43 +10,16 @@
 
 html {
   font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 112.5%;
+  font-size: 18px;
 }
 
-a:hover {
-  background-image: linear-gradient(
-    transparent 0%,
-    transparent calc(50% - 9px),
-    rgba(0, 255, 0, 0.35) calc(50% - 9px),
-    rgba(0, 255, 0, 0.35) 100%
-  );
-}
-
-/* 
-  A quick note to address questions that may come up about why I'm using class-based 
-  styling like this in combination with the Emotion library: I found out the hard way 
-  while working on this demo that there are current issues with the CSS prop in Emotion
-  in React 17 (https://github.com/emotion-js/emotion/issues/2041), so I decided that this
-  was the fastest approach to deal with styling in cases where I would do so using the css prop 
-  vs styled components.
-
-*/
 .article-body {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  width: 80vw;
-}
-
-
-aside {
-  margin: 4px;
-  width: 15%;
+  width: 50vw;
 }
 
 h1,
 h2,
-h3 {
+h3, h4, h5, h6, .tag {
   font-family: 'IBM Plex Mono', monospace;
 }
 
@@ -60,11 +33,34 @@ h3 {
 
 .hr-heading h2 span { 
     background:#fff; 
-    padding:0 10px; 
+    padding: 0 10px; 
 }
 
 main {
-  margin: 4px;
-  width: 85%;
+  margin-left: 24px;
+}
+
+.paragraph {
+  font-size: 20px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.paragraph a, .rs-link {
+  color: black;
+   background-image: linear-gradient(
+    transparent 0%,
+    transparent calc(50% - 9px),
+    rgba(0, 255, 0, 0.35) calc(50% - 9px),
+    rgba(0, 255, 0, 0.35) 100%
+  );
+  transition: background-position 120ms ease-in-out 0s, padding 120ms ease-in-out 0s;
+  background-size: 100% 200%;
+  background-position: 0px 0px;
+  text-decoration: none;
+}
+
+.paragraph a:hover, .rs-link:hover {
+  background-position: 0px 100%;
 }
 
